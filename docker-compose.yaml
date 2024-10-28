@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  mobile-api:
+    build: ./mobile-api
+    ports:  
+      - "3000"
+    networks:
+      - bff-net
+
+  web-api:
+    build: ./web-api
+    ports:
+      - "8080"
+    networks:
+      - bff-net
+  
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+    depends_on:
+      - mobile-api
+      - web-api
+    networks:
+      - bff-net
+
+networks:
+  bff-net:
+    driver: bridge
