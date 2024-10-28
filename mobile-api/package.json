@@ -53,6 +53,7 @@
     "kind-of": "^3.2.2",
     "lazy-cache": "^1.0.4",
     "longest": "^1.0.1",
+    "mariadb": "^3.4.0",
     "media-typer": "^0.3.0",
     "merge-descriptors": "^1.0.1",
     "methods": "^1.1.2",
@@ -64,6 +65,7 @@
     "morgan": "^1.9.1",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",
+    "nodemon": "^3.1.7",
     "on-finished": "^2.3.0",
     "on-headers": "^1.0.2",
     "optimist": "^0.3.7",
@@ -79,6 +81,7 @@
     "safe-buffer": "^5.1.2",
     "safer-buffer": "^2.1.2",
     "send": "^0.16.2",
+    "sequelize": "^6.37.5",
     "serve-static": "^1.13.2",
     "setprototypeof": "^1.1.0",
     "source-map": "^0.4.4",
@@ -97,7 +100,7 @@
     "yargs": "^3.10.0"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon --env-file=.env app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
